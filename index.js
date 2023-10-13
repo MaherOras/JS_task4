@@ -11,7 +11,7 @@ document.addEventListener('keyup', (event) =>
       if(isNaN(sk)&&(document.activeElement === document.querySelector("input")))
                 {
                   screenV= document.querySelector("input").value;
-                  screenV=screenV.slice(0,screenV.length-1);
+                  screenV=screenV.slice(0,-1);
                 }
       document.querySelector("input").value=screenV
       })
@@ -29,7 +29,7 @@ document.addEventListener('keyup', (event) =>
                 {
                   case "del": screenV="";sb="";break;
                   case "="  : sb="";break;
-                  case "C"  : screenV=screenV.slice(0,screenV.length-1);sb="";
+                  case "C"  : screenV=screenV.slice(0,-1);sb="";
                               break;
                   //default: 
                 }
